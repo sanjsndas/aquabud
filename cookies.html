@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - AquaBud</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-blue: #4ab7e5;
+            --primary-green: #6bd68a;
+            --dark-blue: #2a7a9d;
+            --dark-green: #3a9d5d;
+            --light-bg: #f5fdf7;
+            --text-dark: #333;
+            --text-medium: #555;
+            --text-light: #777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--primary-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Cookie Policy Section */
+        .policy-section {
+            padding: 80px 0;
+        }
+        
+        .policy-container {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .policy-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .policy-title h1 {
+            font-size: 36px;
+            color: var(--dark-blue);
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+        
+        .policy-title h1::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .policy-title p {
+            color: var(--text-medium);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+        
+        .policy-content {
+            line-height: 1.8;
+        }
+        
+        .policy-content h2 {
+            color: var(--dark-green);
+            margin: 30px 0 15px;
+            font-size: 28px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .policy-content h2::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+            bottom: 0;
+            left: 0;
+        }
+        
+        .policy-content h3 {
+            color: var(--dark-blue);
+            margin: 25px 0 10px;
+            font-size: 22px;
+        }
+        
+        .policy-content p {
+            margin-bottom: 15px;
+            color: var(--text-medium);
+        }
+        
+        .policy-content ul, .policy-content ol {
+            margin: 15px 0 15px 30px;
+        }
+        
+        .policy-content li {
+            margin-bottom: 10px;
+            color: var(--text-medium);
+        }
+        
+        .contact-points {
+            margin: 40px 0;
+        }
+        
+        .contact-point {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+        
+        .contact-point h4 {
+            color: var(--dark-blue);
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        
+        /* Cookie Consent Banner */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cookie-consent p {
+            margin: 0 20px 15px 0;
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .accept-btn {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            color: white;
+        }
+        
+        .decline-btn {
+            background-color: #444;
+            color: white;
+        }
+        
+        .cookie-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+                flex-direction: column;
+                gap: 0;
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                padding: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .policy-container {
+                padding: 30px 20px;
+            }
+            
+            .policy-title h1 {
+                font-size: 30px;
+            }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .policy-title h1 {
+                font-size: 26px;
+            }
+            
+            .policy-content h2 {
+                font-size: 24px;
+            }
+            
+            .cookie-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">AB</div>
+                <div class="logo-text">AquaBud</div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cookie Policy Section -->
+    <section class="policy-section">
+        <div class="container">
+            <div class="policy-container">
+                <div class="policy-title">
+                    <h1>Cookie Policy</h1>
+                    <p>Last Updated: June 1, 2023</p>
+                </div>
+                
+                <div class="policy-content">
+                    <p>Welcome to AquaBud's Cookie Policy. This document explains what cookies are, how we use them, and your choices regarding cookies. By using our website, you consent to the use of cookies in accordance with this policy.</p>
+                    
+                    <h2>What Are Cookies?</h2>
+                    <p>Cookies are small text files that are placed on your computer, smartphone, or other device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners.</p>
+                    
+                    <p>Cookies may be either "persistent" cookies or "session" cookies. Persistent cookies remain on your device for the period of time specified in the cookie, while session cookies are deleted when you close your web browser.</p>
+                    
+                    <h2>How We Use Cookies</h2>
+                    <p>AquaBud uses cookies for several purposes:</p>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> These are necessary for the website to function and cannot be switched off. They are usually only set in response to actions you take such as logging in or filling in forms.</li>
+                        <li><strong>Performance Cookies:</strong> These allow us to count visits and traffic sources so we can measure and improve the performance of our site.</li>
+                        <li><strong>Functional Cookies:</strong> These enable the website to provide enhanced functionality and personalization.</li>
+                        <li><strong>Targeting Cookies:</strong> These may be set through our site by our advertising partners to build a profile of your interests.</li>
+                    </ul>
+                    
+                    <h2>Types of Cookies We Use</h2>
+                    <p>Below is a detailed list of the cookies we use on our website:</p>
+                    
+                    <h3>Strictly Necessary Cookies</h3>
+                    <ul>
+                        <li><strong>auth_token:</strong> Used to keep you logged in during your visit</li>
+                        <li><strong>session_id:</strong> Maintains your session state across page requests</li>
+                        <li><strong>csrf_token:</strong> Protects against cross-site request forgery attacks</li>
+                    </ul>
+                    
+                    <h3>Performance Cookies</h3>
+                    <ul>
+                        <li><strong>_ga:</strong> Google Analytics cookie used to distinguish users</li>
+                        <li><strong>_gid:</strong> Google Analytics cookie used to distinguish users</li>
+                        <li><strong>_gat:</strong> Google Analytics cookie used to throttle request rate</li>
+                    </ul>
+                    
+                    <h3>Functional Cookies</h3>
+                    <ul>
+                        <li><strong>language:</strong> Remembers your preferred language setting</li>
+                        <li><strong>theme:</strong> Stores your preferred color theme</li>
+                        <li><strong>consent:</strong> Remembers your cookie consent preferences</li>
+                    </ul>
+                    
+                    <h2>Third-Party Cookies</h2>
+                    <p>We may also use various third-party cookies to report usage statistics of the website, deliver advertisements on and through the website, and so on. These include:</p>
+                    <ul>
+                        <li><strong>Google Analytics:</strong> For analyzing website traffic</li>
+                        <li><strong>Facebook Pixel:</strong> For tracking conversions from Facebook ads</li>
+                        <li><strong>Hotjar:</strong> For understanding user behavior through heatmaps</li>
+                    </ul>
+                    
+                    <h2>Managing Cookies</h2>
+                    <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. However, if you do this, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
+                    
+                    <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit <a href="https://www.aboutcookies.org/" target="_blank">www.aboutcookies.org</a> or <a href="https://www.allaboutcookies.org/" target="_blank">www.allaboutcookies.org</a>.</p>
+                    
+                    <h2>Your Choices Regarding Cookies</h2>
+                    <p>If you'd like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser. Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly.</p>
+                    
+                    <h2>Changes to This Cookie Policy</h2>
+                    <p>We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page and updating the "Last Updated" date at the top of this Cookie Policy. You are advised to review this Cookie Policy periodically for any changes.</p>
+                    
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Cookie Policy, you can contact us:</p>
+                    
+                    <div class="contact-points">
+                        <div class="contact-point">
+                            <h4>By Email</h4>
+                            <p>For general inquiries about our cookie policy or data practices, please email our Data Protection Officer at dpo@aquabud.com. We aim to respond to all email inquiries within 48 hours during business days. For urgent matters, please include "URGENT" in your subject line. Our team monitors this inbox continuously and will prioritize your request accordingly.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>By Phone</h4>
+                            <p>You can reach our customer support team regarding cookie-related questions at +1 (212) 555-0102. Our phone lines are open Monday through Friday from 9:00 AM to 5:00 PM EST. For international callers, please dial the appropriate country code. After-hours calls will be returned the next business day. Please have your account information ready when you call to help us serve you better.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>By Mail</h4>
+                            <p>For formal communications or legal notices regarding our cookie policy, please write to us at: AquaBud Legal Department, 726 Broadway, New York, NY 10003, USA. We recommend sending such correspondence via certified mail with return receipt requested. Our legal team reviews all mailed correspondence within 5 business days of receipt.</p>
+                        </div <div class="contact-point">
+                            <h4>Through Our Website</h4>
+                            <p>You may submit questions about our cookie policy through the contact form on our website. Please select "Privacy Policy Question" from the dropdown menu to ensure your inquiry is routed correctly. Our web form is available 24/7, and responses are typically provided within 2 business days. You'll receive a confirmation email with a tracking number for your inquiry.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>In-Person Consultation</h4>
+                            <p>For complex cookie-related issues or if you prefer face-to-face communication, you may schedule an appointment at our New York headquarters. Appointments are available Tuesday through Thursday from 10:00 AM to 3:00 PM. Please call at least 48 hours in advance to schedule. Bring a valid photo ID and any relevant documentation to your appointment.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Via Social Media</h4>
+                            <p>We monitor our official social media accounts for general questions about our cookie policy. However, for privacy and security reasons, please avoid sharing personal information through social media channels. Our team responds to social media inquiries within 24 hours during weekdays. For official communications, we'll direct you to more secure channels.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>For EU Residents</h4>
+                            <p>EU residents with questions about GDPR compliance regarding our cookie usage may contact our EU representative at eu-privacy@aquabud.com. This dedicated email address is monitored by our GDPR compliance team, who will respond within 72 hours as required by EU regulations. Please include your country of residence in your inquiry.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>For California Residents</h4>
+                            <p>California residents may exercise their CCPA rights regarding cookie data by emailing ccpa-request@aquabud.com or calling our dedicated CCPA hotline at +1 (212) 555-0103. Please specify whether you're requesting information about data collection or opting out of data sales. We are required to respond to verifiable requests within 45 days.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>For Business Partners</h4>
+                            <p>Vendors, advertisers, and other business partners with questions about cookie usage in our business relationships should contact partnerships@aquabud.com. Our business development team handles these inquiries and can provide detailed technical specifications for cookie implementation in joint marketing initiatives or co-branded services.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>For Press Inquiries</h4>
+                            <p>Members of the media seeking information about our cookie policy or data practices should contact press@aquabud.com. Our communications team can provide official statements, arrange interviews with subject matter experts, or supply background information about our data protection measures and cookie usage policies.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Technical Support for Cookie Issues</h4>
+                            <p>If you're experiencing technical difficulties related to cookies on our website, contact support@aquabud.com with details about your browser, device, and the nature of the problem. Our technical team can guide you through troubleshooting steps or escalate the issue to our developers if needed. Screenshots of error messages are particularly helpful.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Accessibility Concerns</h4>
+                            <p>If our cookie consent mechanism presents accessibility challenges, please contact accessibility@aquabud.com. We're committed to making our website usable for all visitors and will work with you to find alternative solutions. Please specify the nature of your accessibility need and the technology you're using to access our site.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Educational Institutions</h4>
+                            <p>Schools, universities, and other educational organizations seeking information about our cookie policies for research or compliance purposes may contact education@aquabud.com. We can provide specialized resources for academic use and arrange informational sessions about our data collection practices for student groups or faculty researchers.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Government Agencies</h4>
+                            <p>Authorized government representatives with official inquiries about our cookie policy should contact legal@aquabud.com with proper documentation of their authority to request information. We cooperate with legitimate law enforcement and regulatory requests while protecting user privacy to the fullest extent permitted by law.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Whistleblower Reports</h4>
+                            <p>If you have concerns about potential misuse of cookies or violation of our privacy policies, you may submit an anonymous report through our ethics hotline at 1-800-555-0199 or via our secure online reporting portal. All reports are investigated by our internal audit team, and retaliation against good-faith whistleblowers is strictly prohibited.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Investor Relations</h4>
+                            <p>Current and prospective investors with questions about how our data collection practices (including cookie usage) impact business operations may contact investor.relations@aquabud.com. Our IR team can provide appropriate disclosures and discuss how our digital analytics inform business strategy during earnings calls and investor meetings.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Job Applicants</h4>
+                            <p>If you have questions about cookies used during our online recruitment process, contact careers@aquabud.com. Our HR team can explain what tracking occurs during application submission and how candidate data is processed. This includes cookies used by our applicant tracking system and video interview platform.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Existing Customers</h4>
+                            <p>Current AquaBud customers with questions about how cookies affect their account or service can contact us through their account dashboard or by emailing help@aquabud.com. For faster service, include your account number in your message. Our customer care team can explain how cookies personalize your experience and manage your preferences.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Prospective Customers</h4>
+                            <p>If you're considering our services and have questions about our cookie practices before becoming a customer, contact sales@aquabud.com. Our sales team can provide detailed information about data collection during the evaluation process and explain how you can control cookie settings while exploring our offerings.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Former Customers</h4>
+                            <p>If you were previously an AquaBud customer and have questions about residual cookie data or historical data collection, contact postservice@aquabud.com. Our retention team can explain our data retention policies and procedures for permanent deletion of personal information after account closure.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Mobile App Users</h4>
+                            <p>For questions specific to cookies and similar technologies in our mobile applications, contact mobile-support@aquabud.com. Include your device type, operating system version, and app version in your inquiry. Our mobile team can explain differences between web cookies and mobile device identifiers used in our apps.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>API Users</h4>
+                            <p>Developers using AquaBud APIs with questions about tracking technologies in our developer portal or API endpoints should contact api-support@aquabud.com. Our developer relations team can provide technical documentation about authentication tokens, session management, and analytics collection in our developer ecosystem.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Affiliate Partners</h4>
+                            <p>Participants in our affiliate program with questions about tracking cookies used for commission attribution should contact affiliates@aquabud.com. Our affiliate team can explain how cookies track referrals and ensure proper credit for sales. We can also provide guidance on implementing affiliate links in compliance with our policies.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Third-Party Developers</h4>
+                            <p>Developers creating integrations with AquaBud services should review our developer documentation at developers.aquabud.com/cookies. For specific technical questions not covered in our docs, contact dev-support@aquabud.com. Include relevant code samples and error logs to help us troubleshoot cookie-related issues in your implementation.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Enterprise Clients</h4>
+                            <p>Businesses with enterprise contracts may contact their dedicated account manager with cookie-related questions or email enterprise@aquabud.com. We can provide customized cookie solutions for large deployments and discuss enterprise-specific data processing agreements that may affect cookie usage in your organization's implementation.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Non-Profit Organizations</h4>
+                            <p>Registered non-profits with questions about our cookie policies as they relate to special pricing or service offerings may contact nonprofit@aquabud.com. Our social impact team can explain any differences in data collection for our charitable programs and discuss privacy considerations specific to your mission.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>International Offices</h4>
+                            <p>For region-specific cookie inquiries outside the United States, contact our international offices: europe@aquabud.com for EU/UK, asia@aquabud.com for Asia-Pacific, or latam@aquabud.com for Latin America. These regional teams can address local compliance requirements and provide localized versions of our cookie policy documentation.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Emergency Contact</h4>
+                            <p>In the event of a suspected data breach involving cookie data or other urgent security matters, immediately contact security@aquabud.com with "SECURITY INCIDENT" in the subject line. Our security operations center monitors this address 24/7 and will respond to valid reports within one hour with next steps for investigation and mitigation.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Legal Department</h4>
+                            <p>For service of legal process or formal communications regarding cookie-related litigation, contact our legal department at legal-notices@aquabud.com or via registered mail to our corporate headquarters. Please allow 5-7 business days for response to legal correspondence, as all such communications undergo thorough review by counsel.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Compliance Questions</h4>
+                            <p>For questions about our compliance with specific regulations (GDPR, CCPA, etc.) as they relate to cookie usage, email compliance@aquabud.com. Our regulatory team stays current on evolving requirements and can provide detailed information about how we adapt our practices to meet various legal frameworks globally.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Product Feedback</h4>
+                            <p>If you have suggestions about how we could improve our cookie consent interface or data collection practices, share your ideas at feedback@aquabud.com. Our product team reviews all feedback and incorporates user suggestions into our development roadmap. Particularly helpful suggestions may qualify for our customer appreciation program.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Bug Reports</h4>
+                            <p>To report technical issues with our cookie implementation (e.g., consent not being saved, incorrect categorization of cookies), email bugs@aquabud.com with detailed reproduction steps. Our quality assurance team investigates all valid bug reports and will keep you updated on resolution progress if you provide contact information.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Accessibility Requests</h4>
+                            <p>Users who need alternative formats of our cookie policy (large print, braille, audio, etc.) may request these accommodations at accessibility@aquabud.com. We're committed to making our policies accessible to all users and will provide appropriate formats within 7 business days of request for most standard formats.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Research Collaborations</h4>
+                            <p>Academic researchers interested in studying our cookie practices or broader privacy approaches may contact research@aquabud.com with their institutional affiliation and research proposal. We selectively collaborate with qualified researchers to advance privacy-preserving technologies while protecting user data and business interests.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Industry Partnerships</h4>
+                            <p>Technology providers offering cookie-related solutions (consent management platforms, privacy tools, etc.) seeking partnership opportunities should email partnerships@aquabud.com. Our business development team evaluates potential collaborations that align with our privacy principles and enhance value for our users.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Parental Inquiries</h4>
+                            <p>Parents or guardians with questions about cookies used in sections of our site directed at children should contact privacy@aquabud.com with "COPPA Inquiry" in the subject line. We comply with all applicable children's privacy laws and can provide specific information about data collection in our youth-oriented services.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Senior Support</h4>
+                            <p>Older adults who need assistance understanding or managing cookie settings may call our senior support line at +1 (212) 555-0104 for patient, step-by-step guidance. Our specially trained representatives can walk you through cookie management in simple terms and send illustrated instructions by email if needed.</p>
+                        </div>
+                        
+                        <div class="contact-point">
+                            <h4>Small Business Owners</h4>
+                            <p>Small business customers using our services can contact sb-support@aquabud.com for cookie-related questions specific to business accounts. We can explain how cookies differ in business versus personal accounts and provide guidance on managing employee access while maintaining appropriate privacy controls.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>AquaBud</h4>
+                    <p>726 Broadway, New York, NY 10003, USA</p>
+                    <p>Phone: (212) 555-0100</p>
+                    <p>Email: info@aquabud.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Garden Maintenance</a></li>
+                        <li><a href="#">Irrigation Systems</a></li>
+                        <li><a href="#">Landscape Design</a></li>
+                        <li><a href="#">Plant Health Care</a></li>
+                        <li><a href="#">Water Features</a></li>
+                        <li><a href="#">Seasonal Planting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                        <li><a href="#">GDPR Compliance</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 AquaBud. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies. You can manage your preferences at any time in our Cookie Policy.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept-btn" id="acceptCookies">Accept</button>
+            <button class="cookie-btn decline-btn" id="declineCookies">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // Cookie Consent
+        const cookieConsent = document.getElementById('cookieConsent');
+        const acceptCookies = document.getElementById('acceptCookies');
+        const declineCookies = document.getElementById('declineCookies');
+        
+        // Check if consent was already given
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieConsent.style.display = 'flex';
+        }
+        
+        acceptCookies.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            cookieConsent.style.display = 'none'; // Hide the cookie consent banner
+        });
+        
+        declineCookies.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'declined');
+            cookieConsent.style.display = 'none'; // Hide the cookie consent banner
+        });
+    </script>
+</body>
+</html>
